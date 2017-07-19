@@ -1,0 +1,18 @@
+  1  #!/bin/sh
+  2  #
+  3  # 6/13/2017
+  4  #
+  5  if [ $# -ne 1 ] ; then
+  6   echo "Usage: script3 file"
+  7   echo " Will determine if the file exists."
+  8   exit 255
+  9  fi
+ 10  
+ 11  if [ -f $1 ] ; then
+ 12   echo File $1 exists.
+ 13   exit 0
+ 14  else
+ 15   echo File $1 does not exist.
+ 16   exit 1
+ 17  fi
+ 18  

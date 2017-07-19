@@ -1,0 +1,45 @@
+  1  #!/bin/sh
+  2  #
+  3  # 6/13/2017
+  4  #
+  5  if [ $# -ne 1 ] ; then
+  6   echo "Usage: script4 filename"
+  7   echo " Will show various attributes of the file given."
+  8   exit 255
+  9  fi
+ 10  
+ 11  echo -n "$1 "                # Stay on the line
+ 12  
+ 13  if [ ! -e $1 ] ; then
+ 14   echo does not exist.
+ 15   exit 1                      # Leave script now
+ 16  fi
+ 17  
+ 18  if [ -f $1 ] ; then
+ 19   echo is a file.
+ 20  elif [ -d $1 ] ; then
+ 21   echo is a directory.
+ 22  fi
+ 23  
+ 24  if [ -x $1 ] ; then
+ 25   echo Is executable.
+ 26  fi
+ 27  
+ 28  if [ -r $1 ] ; then
+ 29   echo Is readable.
+ 30  else
+ 31   echo Is not readable.
+ 32  fi
+ 33  
+ 34  if [ -w $1 ] ; then
+ 35   echo Is writable.
+ 36  fi
+ 37  
+ 38  if [ -s $1 ] ; then
+ 39   echo Is not empty.
+ 40  else
+ 41   echo Is empty.
+ 42  fi
+ 43  
+ 44  exit 0                       # No error
+ 45  

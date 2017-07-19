@@ -1,0 +1,70 @@
+  1  #!/bin/sh
+  2  #
+  3  # 6/13/2017
+  4  #
+  5  echo "script3"
+  6  
+  7  # String variables
+  8  str1="Kirk"
+  9  str2="Kirk"
+ 10  str3="Spock"
+ 11  str3="Dr. McCoy"
+ 12  str4="Engineer Scott"
+ 13  str5="A"
+ 14  str6="B"
+ 15  
+ 16  echo str1=$str1 str2=$str2 str3=$str3 str4=$str4
+ 17  
+ 18  if [ "$str1" = "$str2" ] ; then
+ 19   echo str1 equals str2
+ 20  else
+ 21   echo str1 does not equal str2
+ 22  fi
+ 23  
+ 24  if [ "$str1" != "$str2" ] ; then
+ 25   echo str1 does not equal str2
+ 26  else
+ 27   echo str1 equals str2
+ 28  fi
+ 29  
+ 30  if [ "$str1" = "$str3" ] ; then
+ 31   echo str1 equals str3
+ 32  else
+ 33   echo str1 does not equal str3
+ 34  fi
+ 35  
+ 36  if [ "$str3" = "$str4" ] ; then
+ 37   echo str3 equals str4
+ 38  else
+ 39   echo str3 does not equal str4
+ 40  fi
+ 41  
+ 42  echo str5=$str5 str6=$str6
+ 43  
+ 44  if [ "$str5" \> "$str6" ] ; then        # must escape the >
+ 45   echo str5 is greater than str6
+ 46  else
+ 47   echo str5 is not greater than str6
+ 48  fi
+ 49  
+ 50  if [[ "$str5" > "$str6" ]] ; then       # or use double brackets
+ 51   echo str5 is greater than str6
+ 52  else
+ 53   echo str5 is not greater than str6
+ 54  fi
+ 55  
+ 56  if [[ "$str5" < "$str6" ]] ; then       # double brackets
+ 57   echo str5 is less than str6
+ 58  else
+ 59   echo str5 is not less than str6
+ 60  fi
+ 61  
+ 62  if [ -n "$str1" ] ; then     # test if str1 is not null
+ 63   echo str1 is not null
+ 64  fi
+ 65  
+ 66  if [ -z "$str7" ] ; then     # test if str7 is null
+ 67   echo str7 is null
+ 68  fi
+ 69  echo "End of script3"
+ 70  
