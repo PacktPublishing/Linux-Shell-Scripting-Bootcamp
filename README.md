@@ -31,5 +31,3 @@ Management Framework on the systems you are running these examples on.
 
 * [Learning PowerShell DSC - Second Edition](https://www.packtpub.com/networking-and-servers/learning-powershell-dsc-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787287242)
 
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
